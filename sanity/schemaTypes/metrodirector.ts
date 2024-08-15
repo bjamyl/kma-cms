@@ -1,28 +1,20 @@
 import { defineType, defineField } from "sanity";
+
 export const metrodirector = defineType({
   name: "metrodirector",
-  title: "Metro director",
+  title: "Metro Director",
   type: "document",
   fields: [
     defineField({
       name: "name",
-      title: "Director name",
+      title: "Director Name",
       type: "string",
     }),
     defineField({
-      name: "image",
+      name: "photo",
       title: "Photo",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative text",
-        },
-      ],
+      type: "reference",
+      to: [{ type: "imageAsset" }], // Reference the imageAsset schema
     }),
   ],
 });
