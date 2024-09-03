@@ -6,12 +6,19 @@ export const assemblyMember = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "page_id",
+      title: "Page ID",
+      type: "string",
+    }),
+    defineField({
       name: "name",
       type: "string",
     }),
     defineField({
       name: "submetro",
-      type: "string",
+      title: "Submetro",
+      type: "reference",
+      to:[{type: "submetro"}]
     }),
     defineField({
       name: "area",
@@ -19,17 +26,9 @@ export const assemblyMember = defineType({
     }),
     defineField({
       name: "image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative text",
-        },
-      ],
+      title: "Photo",
+      type: "reference",
+      to: [{ type: "imageAsset" }], 
     }),
     defineField({
       name: "startDate",

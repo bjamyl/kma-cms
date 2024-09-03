@@ -14,6 +14,11 @@ export const imageAsset = defineType({
       },
     }),
     defineField({
+      name: "image_url",
+      title: "Image URL",
+      type: "string",
+    }),
+    defineField({
       name: "alt",
       title: "Alternative Text",
       type: "string",

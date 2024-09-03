@@ -5,6 +5,11 @@ export const project = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "page_id",
+      title: "Page ID",
+      type: "string",
+    }),
+    defineField({
       name: "title",
       title: "Project title",
       type: "string",

@@ -5,6 +5,11 @@ export const about = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "page_id",
+      title: "Page ID",
+      type: "string",
+    }),
+    defineField({
       name: "brief",
       type: "blockContent",
     }),
@@ -33,19 +38,19 @@ export const about = defineType({
       type: "string",
     }),
     defineField({
-        name: "map",
-        title: "Location map",
-        type: "image",
-        options: {
-          hotspot: true,
+      name: "map",
+      title: "Location map",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
         },
-        fields: [
-          {
-            name: "alt",
-            type: "string",
-            title: "Alternative text",
-          },
-        ],
-      }),
+      ],
+    }),
   ],
 });

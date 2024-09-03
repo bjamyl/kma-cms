@@ -16,6 +16,7 @@ import { project } from "./project";
 import { submetro } from "./submetro";
 import { event } from "./event";
 import { imageAsset } from "./imageAsset";
+import { settings } from "./settings";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -30,10 +31,10 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     department,
     departmentHead,
     mce,
-    event,
     submetro,
     project,
     metrodirector,
     imageAsset,
+    settings,
   ],
 };

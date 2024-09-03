@@ -6,6 +6,11 @@ export const department = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "page_id",
+      title: "Page ID",
+      type: "string",
+    }),
+    defineField({
       name: "departmentname",
       title: "Department name",
       type: "string",
